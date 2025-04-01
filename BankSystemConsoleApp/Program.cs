@@ -10,8 +10,8 @@ namespace BankSystemConsoleApp
             TransferSystem.OnBalanceUpdated += TransferSystem_OnBalanceUpdated;
             SalarySystem.OnPaidSalaries += SalarySystem_OnPaidSalaries;
 
-            User dean = new User("Dean");
-            User aituk = new User("Aituk");
+            User dean = new User("Динислам");
+            User aituk = new User("Айтуган");
 
             SalarySystem.PaySalary(dean, 500, EVoluteType.RUB);
             SalarySystem.PaySalary(aituk, 700, EVoluteType.RUB);
