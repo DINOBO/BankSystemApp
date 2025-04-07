@@ -13,9 +13,9 @@ namespace BankSystem.Systems
         /// Перевод денег между пользователями
         /// </summary>
         /// <param name="userFrom">С какого пользователя</param>
-        /// <param name="userTo">В какого пользователя</param>
+        /// <param name="userTo">К какому пользователю</param>
         /// <param name="amount">Количество</param>
-        /// <param name="voluteType">Тип волюты</param>
+        /// <param name="voluteType">Тип валюты</param>
         public static void TransferMoney(User userFrom, User userTo, float amount, EVoluteType voluteType = EVoluteType.RUB)
         {
             if (userFrom != null && userTo != null && 
@@ -38,10 +38,10 @@ namespace BankSystem.Systems
                         throw new Exception($"У пользователя {userFrom.Name} не хватает денег");
                 }
                 else
-                    throw new Exception($"У одного из пользователей не найден счет с такой волютой");
+                    throw new Exception($"У одного из пользователей не найден счет с такой валютой");
             }
             else
-                throw new NullReferenceException($"Пользователи или их счета имеет значение Null");
+                throw new NullReferenceException($"Пользователи или их счета имеют значение NULL");
         }
     }
 }
